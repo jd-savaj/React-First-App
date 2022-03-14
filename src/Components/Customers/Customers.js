@@ -4,7 +4,7 @@ export const Customers = () => {
     return (
         <div className="card-body">
             <h4>Jaydip Savaj</h4>
-            <p>jdfhghihi wihuiui hwurhuihfws iwif wii iuh iwhui </p>
+            <p>jdfhghihi wihuiui hwurhuihfws iwif wii iuh iwhui cvhseghdfsdhg. </p>
             <button className="btn btn-sm btn-danger my-2" onClick="">Delete</button> 
             {/* <form>
                 <div className="form-group">
