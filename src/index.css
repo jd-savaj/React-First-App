@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.card{
+  border: unset;
+}
+.sticky-top {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #f8f9fa;
+  top: 0;
+}
+
+.sticky-bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  background: #f7f7f7;
 }

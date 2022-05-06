@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Customers = (props) => {
     return (
-        <div className="card-body page-center">
+        <div className="card-body page-center" style={{paddingBottom:'50px'}}>
             <h2 className="mb-3" style={{fontSize:'24px',fontWeight:'bold'}}>Customers List : </h2>
             { props.customers.length === 0 ? "No Customer Data Found" :
                 props.customers.map((customer) =>  {

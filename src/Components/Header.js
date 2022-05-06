@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Header = (props) => {
   	return (
-		<div className="card-header">	
+		<div className="card-header sticky-top">	
 			<nav className="navbar navbar-expand-lg navbar-light bg-light page-center">
 				<a className="navbar-brand" href="#">{props.title}</a>
 				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

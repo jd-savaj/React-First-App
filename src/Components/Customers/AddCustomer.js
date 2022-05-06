@@ -17,7 +17,7 @@ export const AddCustomer = (props) => {
 		}
 	}
   	return (
-		<div className="card-body page-center" style={{borderBottom:'1px solid #e7e5e5'}}>
+		<div className="card-body page-center" style={{paddingTop:'100px'}}>
 			<h2 className="mb-3" style={{fontSize:'24px',fontWeight:'bold'}}>Add Customer : </h2>
 			<form onSubmit={onSubmit}>
 				<div className="form-group">
