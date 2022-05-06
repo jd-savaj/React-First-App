@@ -1,11 +1,20 @@
 import React from 'react'
 
-export const Customers = () => {
+export const Customers = (props) => {
     return (
-        <div className="card-body">
-            <h4>Jaydip Savaj</h4>
-            <p>jdfhghihi wihuiui hwurhuihfws iwif wii iuh iwhui cvhseghdfsdhg. </p>
-            <button className="btn btn-sm btn-danger my-2" onClick="">Delete</button> 
+        <div className="card-body page-center">
+            <h2 className="mb-3" style={{fontSize:'24px',fontWeight:'bold'}}>Customers List : </h2>
+            { props.customers.length === 0 ? "No Customer Data Found" :
+                props.customers.map((customer) =>  {
+                    return(
+                        <span key={customer.cid}>
+                            <h4 style={{textTransform:'capitalize'}}>{customer.firstName} {customer.lastName}</h4>
+                            <p>{customer.address}</p>
+                            <button className="btn btn-sm btn-danger my-2"  onClick={() => {props.onDelete(customer)}}>Delete</button> 
+                        </span>
+                    )
+                }) 
+            }    
             {/* <form>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>

@@ -1,12 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-export const AddCustomer = () => {
+export const AddCustomer = (props) => {
+	const [firstName, setFirstName] = useState("");
+	const [lastName, setLastName] 	= useState("");
+	const [address, setAddress] 	= useState("");
+
+	const onSubmit = (e) => {
+		e.preventDefault();
+		if(!firstName || !lastName || !address){			
+			alert('Please enter all fields')
+		} else {
+			props.addCustomer(firstName,lastName,address)
+			setFirstName('');
+			setLastName('');
+			setAddress('');
+		}
+	}
   	return (
-    	<div className="card-body">
-			<h5 className="card-title">Special title treatment</h5>
-			<p className="card-text">
-				With supporting text below as a natural lead-in to additional content.
-			</p>
+		<div className="card-body page-center" style={{borderBottom:'1px solid #e7e5e5'}}>
+			<h2 className="mb-3" style={{fontSize:'24px',fontWeight:'bold'}}>Add Customer : </h2>
+			<form onSubmit={onSubmit}>
+				<div className="form-group">
+					<label htmlFor="firstName">First Name</label>
+					<input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} className="form-control" id="firstName" placeholder="Enter First Name" />
+				</div>
+				<div className="form-group">
+					<label htmlFor="lastName">Last Name</label>
+					<input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} className="form-control" id="lastName" placeholder="Enter First Name" />
+				</div>
+				<div className="form-group">
+					<label htmlFor="address">Address</label>
+					<input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className="form-control" id="address" placeholder="Enter First Name" />
+				</div>
+				<button type="submit" className="btn btn-sm btn-success">Add Customer</button>
+			</form>
 		</div>
   	)
 }
